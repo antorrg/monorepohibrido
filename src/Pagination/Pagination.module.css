@@ -1,0 +1,105 @@
+.pagination{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.buttonL {
+    position: relative; /* Para permitir posicionar el pseudoelemento */
+    margin-right: 2rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #decfc9;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  
+  /* Pseudoelemento que forma la flecha */
+  .buttonL::before {
+    content: ''; /* No texto, solo el elemento gráfico */
+    position: absolute;
+    top: 50%; /* Centrar verticalmente */
+    left: -10px; /* Posicionarlo justo a la izquierda del botón */
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #646cff; /* Color y grosor de las líneas de la flecha */
+    border-bottom: 2px solid #646cff; /* Color y grosor de las líneas de la flecha */
+    transform: translateY(-50%) rotate(45deg); /* Rotar para hacer la punta de flecha */
+  }
+  
+  .buttonL:hover::before {
+    border-color: #ffffff; /* Cambia el color de la flecha al hacer hover */
+  }
+  .buttonL:focus,
+  .buttonL:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }  
+
+  /*---------------------------------------*/
+
+  .buttonR {
+    position: relative; /* Para permitir posicionar el pseudoelemento */
+    margin-left: 2rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color:#decfc9;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  
+  /* Pseudoelemento que forma la flecha hacia la derecha */
+  .buttonR::after {
+    content: ''; /* No texto, solo el elemento gráfico */
+    position: absolute;
+    top: 50%; /* Centrar verticalmente */
+    right: -10px; /* Posicionarlo justo a la derecha del botón */
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #646cff; /* Crear la línea derecha */
+    border-top: 2px solid #646cff; /* Crear la línea superior */
+    transform: translateY(-50%) rotate(45deg); /* Rotar para hacer la punta de flecha */
+  }
+  
+  .buttonR:hover::after {
+    border-color: #ffffff; /* Cambia el color de la flecha al hacer hover */
+  }
+ 
+  .buttonR:focus,
+  .buttonR:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }  
+  @media (max-width: 600px) {
+    .pagination {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttonL {
+        margin-right: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .buttonR {
+        margin-left: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    strong {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    /* Alinear los botones de la izquierda y derecha en sus respectivas filas */
+    .buttonGroupLeft, .buttonGroupRight {
+        display: flex;
+        justify-content: center;
+    }
+}

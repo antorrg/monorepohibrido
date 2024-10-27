@@ -1,0 +1,146 @@
+.detailContainer {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center; 
+}
+
+.card{
+    background-color:  #decfc9;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40rem;
+    max-height: 40rem;
+    border: solid grey;
+    padding: 1rem;
+    margin: 0.5rem;
+    box-shadow: -10px 1px 6px rgba(0, 0, 0, 0.1), -10px 15px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image{
+    max-width: 20rem;
+    max-height: 25rem;
+    margin-left: 1rem;
+    align-self: center; 
+}
+.clickableText {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: xx-large;
+}
+.card:hover {
+    box-shadow: -10px 1px 12px rgba(0, 0, 0, 0.2), -10px 15px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.card:active {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5); /* Efecto de iluminación */
+    transform: scale(0.98); /* Leve reducción de tamaño para simular un "click" */
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items:  flex-start;
+    margin:0;
+
+}
+.content {
+    display: flex;
+    align-items: flex-start; /* Align items to the start (left) */
+    justify-content: space-between;
+    width: 100%;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+  
+  p {
+    margin-left: 0.5rem; /* Remueve el margen predeterminado del párrafo */
+  }
+  @media (max-width: 960px){
+    .detailContainer {
+      position:absolute;
+      top:1;
+      left:0;
+      width: 100vw;
+      height: 90vh;
+  
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center;
+  }
+  .card{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    align-items: center;
+    padding: 0;
+    margin: 0.5rem;
+}
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+   
+  }
+   .image{
+    max-width: 90vw;
+    margin-right: 0;
+    align-self: flex-end; 
+    }
+  }
+  @media (max-width: 767px){
+    .detailContainer {
+      position:absolute;
+      top:0;
+      left:0;
+      width: 100vw;
+      height: 100vh;
+  
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center;
+  }
+  .card{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    align-items: center;
+    padding: 0;
+    margin: 0.5rem;
+}
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+   
+  }
+   .image{
+    max-width: 90vw;
+    margin-left: 0;
+    align-self: center; 
+    }
+  }
