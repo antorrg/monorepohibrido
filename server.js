@@ -41,11 +41,6 @@ if (env.Status === 'development') {
     // En producción, servir archivos desde `dist`
 
     app.use(express.static(path.join(dirname, 'dist/assets')))
-    // app.use('/assets', express.static(path.join(dirname, 'dist/assets'), {
-    //     setHeaders: (res) => {
-    //         res.set('Content-Type', 'application/javascript');
-    //     }
-    // }));
 
     app.get('/',  renderError((req, res) => {
         res.render('product',  {url: "/form"});

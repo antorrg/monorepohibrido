@@ -35,28 +35,3 @@ async function moveHtml() {
 }
 
 moveHtml()
-// import fs from 'fs/promises'
-// import path from 'path'
-// import { fileURLToPath } from 'url'
-
-// const dirname = path.dirname(fileURLToPath(import.meta.url))
-// const projectRoot = path.join(dirname, '..')
-
-// async function moveHtml() {
-//   try {
-//     // Crear el directorio pages si no existe
-//     await fs.mkdir(path.join(projectRoot, 'dist', 'pages'), { recursive: true })
-    
-//     // Mover el index.html
-//     await fs.rename(
-//       path.join(projectRoot, 'dist', 'index.html'),
-//       path.join(projectRoot, 'dist', 'pages', 'index.html')
-//     )
-    
-//     console.log('HTML file moved successfully')
-//   } catch (error) {
-//     console.error('Error moving HTML file:', error)
-//   }
-// }
-
-// moveHtml()
